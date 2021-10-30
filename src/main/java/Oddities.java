@@ -23,10 +23,22 @@ public class Oddities {
         int  firstLine=sc.nextInt();
         int [] inputs=new int[firstLine];
         //Accept Input
-        for(int i=0;i<firstLine;i++)
-            inputs[i]=sc.nextInt();
+        oddities(sc, firstLine, inputs);
+        odditiesStream(sc, firstLine, inputs);
+    }
+    private static String odditiesStream(Scanner sc, int firstLine, int[] inputs) {
+        for(int i = 0; i< firstLine; i++)
+            inputs[i]= sc.nextInt();
+        for(int input: inputs)
+          return (inputs[input]%2==0)? inputs[input]+" is even": inputs[input]+" is odd";
+        return null;
+    }
+
+    private static void oddities(Scanner sc, int firstLine, int[] inputs) {
+        for(int i = 0; i< firstLine; i++)
+            inputs[i]= sc.nextInt();
         //display output
-        for(int i=0;i<inputs.length;i++)
+        for(int i = 0; i< inputs.length; i++)
         {
             System.out.println((inputs[i]%2==0)? inputs[i]+" is even": inputs[i]+" is odd");
         }
